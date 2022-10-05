@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camel-k
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: camel-k
+  template:
+    metadata:
+      labels:
+        app: camel-k
+    spec:
+      containers:
+      - name: camel-k
+        image: fabxc/instrumented_app
+        ports:
+        - name: web
+          containerPort: 8080                               

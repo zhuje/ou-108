@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  labels:
+    k8s-app: camel-pod-monitor-f
+  name: camel-pod-monitor
+namespace: sandbox
+spec:
+  selector:
+    matchLabels:
+      app: camel-k
+  podMetricsEndpoints:
+  - targetPort: 8080
+  - jobLabel: monitor-camel
