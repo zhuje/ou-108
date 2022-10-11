@@ -9,6 +9,8 @@ This creates the Namespace (sandbox), a Deployment (name: camel-k) , a Pod Monit
 
 * *Note: if the ConfigMap already exists you must manually update to include `enableUserWorkload: true`
 
+`$ oc -n openshift-monitoring edit configmap cluster-monitoring-config`
+
 ```
 apiVersion: v1
 kind: ConfigMap
@@ -20,3 +22,4 @@ data:
     enableUserWorkload: true 
 ```
 
+Reference: https://docs.openshift.com/container-platform/4.7/monitoring/enabling-monitoring-for-user-defined-projects.html <br/>
