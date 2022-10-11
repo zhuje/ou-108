@@ -5,9 +5,9 @@ https://issues.redhat.com/browse/OU-108
 
 ## Run Script 
 `$ ./start.sh` </br>
-This creates the namespace (sandbox), a deployment (name: camel-k) , a pod monitor(name: camel-pod-monitor), and deploys a *configMap to allow user-defined projects to be monitored by Openshift. </br>
+This creates the namespace (sandbox), a deployment (name: camel-k) , a pod monitor(name: camel-pod-monitor), and deploys a *ConfigMap to allow user-defined projects to be monitored by Openshift. </br>
 
-* *NOTE: if the configMap already exists you must manually update to include `enableUserWorkload: true`
+* *Note: if the ConfigMap already exists you must manually update to include `enableUserWorkload: true`
 
 ```
 apiVersion: v1
