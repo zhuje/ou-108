@@ -9,7 +9,7 @@ This creates the Namespace (sandbox), a Deployment (name: camel-k) , a Pod Monit
 
 * *Note: if the ConfigMap already exists you must manually update to include `enableUserWorkload: true`
 
-<code>
+```
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -18,5 +18,5 @@ metadata:
 data:
   config.yaml: |
    <b> enableUserWorkload: true </b>
-</code>
+```
 
